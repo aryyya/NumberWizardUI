@@ -335,7 +335,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Congratulations.
+  m_Text: I couldn't guess your number.
 --- !u!222 &899402721
 CanvasRenderer:
   m_ObjectHideFlags: 0

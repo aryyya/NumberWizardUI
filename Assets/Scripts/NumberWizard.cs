@@ -11,6 +11,7 @@ public class NumberWizard : MonoBehaviour
     int min;
     int max;
     int guess;
+    int maxGuesses;
 
     void Start()
     {
@@ -25,7 +26,8 @@ public class NumberWizard : MonoBehaviour
     void Initialize()
     {
         min = 1;
-        max = 100 + 1;
+        max = 1000 + 1;
+        maxGuesses = 10;
         SetGuess();
     }
 
@@ -34,6 +36,12 @@ public class NumberWizard : MonoBehaviour
         if /**/ (guessDistance == "hi") max = guess;
         else if (guessDistance == "lo") min = guess;
         guess = (max + min) / 2;
+
+        maxGuesses -= 1;
+        if (maxGuesses <= 0)
+        {
+            SceneManager.LoadScene("Win");
+        }
     }
 
     void ShowGuess()
@@ -55,6 +63,6 @@ public class NumberWizard : MonoBehaviour
 
     public void GuessIsCorrect()
     {
-        SceneManager.LoadScene("Win");
+        SceneManager.LoadScene("Lose");
     }
 }
