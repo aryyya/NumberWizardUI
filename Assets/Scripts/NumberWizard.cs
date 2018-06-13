@@ -43,11 +43,11 @@ public class NumberWizard : MonoBehaviour
         {
             SceneManager.LoadScene("Win");
         }
-        guessesRemainingText.text = maxGuesses + " " + Utility.Pluralize(maxGuesses, "guess", "es") + " remaining.";
     }
 
     void ShowGuess()
     {
+        guessesRemainingText.text = maxGuesses + " " + Utility.Pluralize(maxGuesses, "guess", "es") + " remaining.";
         guessText.text = "Is your number " + guess + "?";
     }
 
