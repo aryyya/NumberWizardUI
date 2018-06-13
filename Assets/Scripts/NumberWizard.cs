@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class NumberWizard : MonoBehaviour
 {
     [SerializeField] Text guessText;
+    [SerializeField] Text guessesRemainingText;
 
     int min;
     int max;
@@ -42,6 +43,7 @@ public class NumberWizard : MonoBehaviour
         {
             SceneManager.LoadScene("Win");
         }
+        guessesRemainingText.text = maxGuesses + " " + Utility.Pluralize(maxGuesses, "guess", "es") + " remaining.";
     }
 
     void ShowGuess()
