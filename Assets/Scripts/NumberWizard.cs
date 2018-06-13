@@ -35,7 +35,7 @@ public class NumberWizard : MonoBehaviour
     {
         if /**/ (guessDistance == "hi") max = guess;
         else if (guessDistance == "lo") min = guess;
-        guess = (max + min) / 2;
+        guess = Random.Range(min, max);
 
         maxGuesses -= 1;
         if (maxGuesses <= 0)
